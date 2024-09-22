@@ -1,9 +1,9 @@
 # 1. O que é o DataHandler?
-É uma ferramenta de software para análise estatística de resultados de exames finais de mercadorias pré-embaladas em IPEMs (órgãos executores do INMETRO).
+É uma ferramenta de software para análise estatística de resultados de fiscalizações de mercadorias pré-embaladas em IPEMs (órgãos executores do INMETRO).
 Consiste apenas de um documento no formato notebook Jupiter (.ipynb) para ser executado no Google Colab. Sua utilização consiste no upload de um relatório de resultados de exames de mercadorias pré-embaladas em PDF obtido do SGI (Sistema de Gestão Integrada). O DataHandler executa as seguintes operações:
 - Extrai todos os resultados de exames do PDF
 - Classifica todos os produtos por segmento (material de construção, higiene pessoal, massas alimentícias, produtos têxteis, etc.)
-- Constrói gráficos de Pareto com os dados, exibindo os segmentos que mais causam reprovações em exames finais
+- Constrói gráficos de Pareto com os dados, exibindo os segmentos que mais causaram reprovações em exames finais
 
 Dessa forma, o DataHandler é capaz de fornecer informações úteis ao planejamento estratégico das ações de fiscalização de mercadorias pré-embaladas, de modo que gestores podem direcionar os recursos disponíveis aos segmentos com maior incidência de reprovação.
 Por fim, o DataHandler pode ser utilizado eventualmente para atualizar as informações e contribuir para a tomada de decisões no tocante à otimização dos recursos disponíveis para fiscalização 
@@ -28,7 +28,7 @@ Por fim, o DataHandler pode ser utilizado eventualmente para atualizar as inform
 3.7 Pronto! O DataHandler foi instalado com sucesso na sua conta Google Drive. Para acessá-lo basta abrir no navegador a url **https://colab.research.google.com/** e procurar por **DataHandler** na aba **Recente** ou na aba **Google Drive**
 
 # 4. Usando o DataHandler
-Para usar o DataHandler você vai precisar antes de qualquer coisa clicar o botão PLAY em INICIALIZE A APLICAÇÃO AQUI. Esta é uma célula de código que carrega as bibliotecas necessárias. Como a ferramenta levanta uma máquina virtual transiente na Google, as bibliotecas são excluídas após um tempo de inatividade.
+Para usar o DataHandler você vai precisar antes de qualquer coisa clicar o botão PLAY em INICIALIZE A APLICAÇÃO AQUI. Esta é uma célula de código que carrega as bibliotecas necessárias. Como a ferramenta levanta uma máquina virtual na Google que não é permanente, as bibliotecas são excluídas após um tempo de inatividade.
 
 Como na primeira vez que usar não haverá nenhum conjunto de dados carregado, você deverá gerar antes um relatório no SGI na opção 4.3.13 (Produtos Coletados / Coletas x Exames Finais, opção “Coletas x Exames Finais”). Depois clique no botão PLAY da opção SE QUISER TRABALHAR COM DADOS NOVOS, EXECUTE ESTA CÉLULA. Vai aparecer um botão pra você fazer o upload do relatório gerado. Depois vai aparecer um campo pra você digitar algum comentário sobre os dados (importante pra identificar o conjunto de dados posteriormente)
 
@@ -50,4 +50,4 @@ ANÁLISE DE PARETO EM PRODUTOS COMERCIALIZADOS EM N.º DE UNID. E UNID. DE COMPR
 Estas opções exibirão o gráficos de Pareto que mostrarão claramente que cerca de 80% das reprovações de exames são decorrentes provavelmente de um pequeno número de segmentos de mercadorias pré-embaladas. Com estas informações, as ações futuras de fiscalização poderão ser intensificadas nestes segmentos, otimizando assim a força de trabalho do IPEM e consequentemente incrementando a defesa do consumidor
 
 # 6. Restrições
-Como o DataHandler utiliza a inteligência artificial da Goggle – chamada de Gemini – se forem carregados PDFs muito grandes pode-se levantar uma exceção (de número 500) atribuída ao excesso de uso da Gemini gratuitamente. O DataHandler poderá ser usado após algumas horas. Obs.: a mesma exceção pode ser levantada também se forem carregados um número considerável de PDFs
+Como o DataHandler utiliza a inteligência artificial da Goggle – chamada Gemini – se forem carregados PDFs muito grandes pode-se levantar uma exceção (de número 500) atribuída ao excesso de uso da Gemini gratuitamente. O DataHandler poderá ser usado após algumas horas. Obs.: a mesma exceção pode ser levantada também se for carregado um número de PDFs que represente uma quantidade de dados que ultrapasse a cota de uso do Gemini de modo gratuito
