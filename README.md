@@ -1,10 +1,10 @@
 # DataHandler
 # 1. O que é o DataHandler?
 É uma ferramenta de software para análise estatística de resultados de fiscalizações de mercadorias pré-embaladas em IPEMs (órgãos executores do INMETRO).
-Consiste apenas de um documento no formato notebook Jupiter (.ipynb) para ser executado no Google Colab. Sua utilização consiste no upload de um relatório de resultados de exames de mercadorias pré-embaladas em PDF obtido do SGI (Sistema de Gestão Integrada do INMETRO). O DataHandler executa as seguintes operações:
+Consiste apenas de um documento no formato notebook Jupiter (.ipynb) para ser executado no Google Colab. Sua utilização tem por base o upload de um relatório de resultados de exames de mercadorias pré-embaladas em PDF obtido do SGI (Sistema de Gestão Integrada do INMETRO). O DataHandler executa as seguintes operações:
 
 - Extrai todos os resultados de exames do PDF
-- Classifica todos os produtos por segmento (material de construção, higiene pessoal, massas alimentícias, produtos têxteis, etc.)
+- Classifica todos os produtos reprovados por segmento (material de construção, higiene pessoal, massas alimentícias, produtos têxteis, etc.)
 - Constrói gráficos de Pareto com os dados, exibindo os segmentos que mais causaram reprovações em exames finais
 
 Dessa forma, o DataHandler é capaz de fornecer informações úteis ao planejamento estratégico das ações de fiscalização de mercadorias pré-embaladas, de modo que gestores podem direcionar os recursos disponíveis aos segmentos com maior incidência de reprovação.
@@ -17,15 +17,16 @@ Por fim, o DataHandler pode ser utilizado eventualmente para atualizar as inform
 # 3. Instalação
 3.1 Baixar o arquivo DataHandler.ipynb
 
-3.2 Abrir seu navegador de internet e fazer login na conta Google (https://accounts.google.com/)
+3.2 Abrir seu navegador de internet e fazer login na sua conta Google (https://accounts.google.com/)
 
 3.2 Acessar a página do Google Colab em https://colab.research.google.com/
 
 3.3 Na página do Google Colab, fazer o upload do arquivo DataHandler.ipynb (ver imagem abaixo)
-![image](https://github.com/user-attachments/assets/8319cb03-b364-4dcf-a61a-4e755ac3f453)
+![upload_colab](https://github.com/user-attachments/assets/90b42f84-bf1c-4ad3-926d-b8ddee7a5b24)
+
 
 3.4 Após fazer o upload, o DataHandler será aberto na página do Google Colabs. Clique no botão “play” da seção INICIALIZAÇÃO
-![Captura de tela de 2024-10-06 19-47-21](https://github.com/user-attachments/assets/0768ea7d-98be-45c0-8f5b-6f427b32817e)
+![inicialização](https://github.com/user-attachments/assets/960a4264-040b-4bb3-b8fc-aa908d602f44)
 
 
 3.5 No decorrer da inicialização será exibida uma tela pedindo permissão para ter acesso ao Google Drive. Selecione sua conta Google e concorde com todas as outras telas que pedirem acesso. Isso vai criar a estrutura de arquivos para a aplicação na sua conta do Google Drive
@@ -48,7 +49,7 @@ Todo relatório que você fizer upload terão os dados armazenados em sua conta 
 # 5. Análise estatística dos dados
 Você pode avaliar os dados carregados na seção ESTATÍSTICAS clicando no botão PLAY das opções
 
-CLIQUE AQUI PARA ANÁLISE DE PARETO EM TODOS OS SEGMENTOS//
+CLIQUE AQUI PARA ANÁLISE DE PARETO EM TODOS OS SEGMENTOS
 
 CLIQUE AQUI PARA ANÁLISE DE PARETO EM MERCADORIAS COMERCIALIZADAS EM UNIDADES DE MASSA
 
