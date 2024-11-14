@@ -1,8 +1,0 @@
-[
-  {
-    "role": "user",
-    "parts": [
-               "Mercadorias com característica 'produto' semelhante a LEITE DE COCO, 'qn_ms'=0, 'qn_vl'=1, 'qn_un'=0 e 'qn_cp'=0 têm a característica 'segmento' igual a 'Diversos' ",
-              ],
-  },
-]
