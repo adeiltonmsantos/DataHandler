@@ -78,5 +78,7 @@ A última opção exibe um gráfico de barras comparando reprovações entre mer
 
 # 6. Restrições
 Como o DataHandler utiliza a inteligência artificial da Goggle – chamada Gemini – se forem carregados PDFs muito grandes pode-se levantar uma exceção (de número 500) atribuída ao excesso de uso da Gemini gratuitamente. O DataHandler poderá ser usado após algumas horas.
-**Observação**: a mesma exceção pode ser levantada também se for carregado um número de PDFs que represente uma quantidade de dados que ultrapasse a cota de uso do Gemini de modo gratuito
+
+**Observação**: a mesma exceção pode ser levantada também se for carregado um número de PDFs que represente uma quantidade de dados que ultrapasse a cota de uso do Gemini de modo gratuito.
+
 **Importante**: a depender da qualidade de conexão com a internet, pode-se processar PDFs com tamanho em torno de 2 e 3 MB, o que pode equivaler a aproximadamente 4.000 registros ou mais. Contudo, a qualidade de sua conexão com a internet e a estabilidade da Google podem permitir o processamento de quantidades maiores de dados
