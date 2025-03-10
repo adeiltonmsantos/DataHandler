@@ -1,4 +1,4 @@
-﻿- A lista abaixo chamada “lista_ref” é uma lista Python cujos itens são dicionários Python. Cada dicionário representa um segmento de mercadorias encontrada no mercado varejista e atacadista
+﻿- A lista abaixo “lista_ref” é uma lista Python com dicionários Python. Cada dicionário representa um segmento de mercadorias encontrada no mercado varejista e atacadista
 lista_ref = [
   {
     'nome': 'Açúcares',
@@ -177,7 +177,7 @@ lista_ref = [
     'nome': 'Infláveis',
     'codigo': 20,
     'produto': [
-      'boia inflável', 'boia de braço', 'colchão inflável',
+      'bóia inflável', 'bóia de braço', 'colchão inflável',
       'colchão bronzeador'
     ]
   },
@@ -205,7 +205,8 @@ lista_ref = [
       'arame', 'argamassa', 'rejunte', 'tinta uso interno', 'tinta uso externo',
       'bucha de fixação', 'lona de polietileno', 'lona plástica para pintura',
       'fita veda rosca', 'veda rosca', 'separador de piso', 'abraçadeira',
-      'bloco de espuma'
+      'bloco de espuma', 'rolo 100% polyester', 'rolo veludo', 'rolo de lã', 
+	'rolo de lã de carneiro'
     ]
   },
   {
@@ -295,7 +296,7 @@ lista_excecoes = [
   'canjica',  'canjiquinha', 'coco ralado', 'leite de coco', 'pão', 'torrada',   
   'sopão', 'fermento', 'mistura para bolo', 'pós para bebida',
   'pó para refresco', 'preparado para refresco', 'preparado sólido', 'bolo',
-  'bolinho', 'panetone', 'polpa de fruta', 'proteína de soja',
+  'bolinho', 'panetone', 'polpa de fruta', 'proteína de soja', 'chá',
   'soja texturizada'
 ]
 - Será fornecido uma lista Python de dicionários Python contendo cada um desses dicionários os pares chave/valor “laudo” e “produto”. Cada um desses dicionários representa uma mercadoria encontrada no mercado. Chame essa lista de “lista_merc” e cada dicionário dela apenas de “mercadoria” e seus pares chave/valor de “característica”, sendo a característica “laudo” um valor numérico para identificar cada mercadoria e a característica “produto” o nome de cada mercadoria
