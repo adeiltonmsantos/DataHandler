@@ -1,0 +1,307 @@
+- Examine a lista Python abaixo chamada segments_list. Cada item da lista é um dicionário que representa um segmento de mercadorias encontradas em supermercados e diversas lojas diferentes, sendo a chave ‘name’ o nome do segmento, a chave ‘code’ um código numérico único para o segmento e a chave ‘products’ uma lista de mercadorias típicas do segmento. Leia segments_list e analise a semântica e grafia dos valores de cada segmento de modo a poder identificar posteriormente o segmento de uma mercadoria dado seu nome:
+segments_list = [
+  {
+    'name': 'Açúcares',
+    'code': 1,
+    'products': [
+      'açúcar cristal', 'açúcar', 'açucar', 'acucar', 'açúcar branco',
+      'açúcar demerara', 'açúcar para confeitar', 'açúcar refinado',
+      'açúcar cristal'
+    ]
+  },
+  {
+    'name': 'Alimento infantil',
+    'code': 2,
+    'products': [
+      'farinha láctea', 'farinha lactea', 'mingaus', 'cereal infantil',
+      'composto lácteo infantil'
+    ]
+  },
+  {
+    'name': 'Bebidas não alcoólicas',
+    'code': 3,
+    'products': ['refrigerantes', 'sucos diversos', 'néctar de fruta']
+  },
+  {
+    'name': 'Bebidas alcoólicas',
+    'code': 4,
+    'products': [
+      'cerveja', 'chopp', 'vinho tinto', 'vinho seco', 'cachaça', 'aguardente'
+    ],
+  },
+  {
+    'name': 'Biscoitos e afins',
+    'code': 5,
+    'products': ['bolachas', 'cookies', 'wafer', 'biscoito recheado']
+  },
+  {
+    'name': 'Cafés',
+    'code': 6,
+    'products': ['café', 'café em grão', 'café torrado e moído', 'café solúvel'],
+  },
+  {
+    'name': 'Condimentos, molhos e similares',
+    'code': 7,
+    'products': [
+      'tempero', 'alho (em natura ou não)', 'páprica', 'sal', 'colorau',
+      'colorífico', 'caldo em tabletes', 'mostarda', 'catchup',
+      'molho para salada'
+    ],
+  },
+  {
+    'name': 'Cosméticos',
+    'code': 8,
+    'products': [
+      'shampoo', 'desodorante', 'perfume', 'colônia', 'condicionador',
+      'creme de pentear', 'tintura para cabelos', 'acetona', 'esmalte',
+      'removedor de esmalte', 'removedor à base de acetona'
+    ]
+  },
+  {
+    'name': 'Dietéticos e productss light',
+    'code': 9,
+    'products': [
+      'adoçante', 'sacarina', 'sucralose', 'barra de cereal',
+      'barra de cereais'
+    ]
+  },
+  {
+    'name': 'Descartáveis para cozinha',
+    'code': 10,
+    'products': [
+      'guardanapos', 'bobina picotada', 'embalagem de alumínio',
+      'embalagem para freezer', 'protetor para fogão', 'saco para lixo',
+      'saco para assar', 'filtro de papel', 'papel alumínio', 'filme de PVC',
+      'filme plástico', 'película aderente', 'assa rápido', 'assa prático',
+      'bolsa hermética', 'embalagem plástica para alimento', 'bobina picotada',
+      'sacos', 'saco plástico multiuso', 'sacos tipo zip', 'saco a vácuo',
+      'sacos picotados', 'sacos de gelo', 'sacos herméticos',
+      'sacos para talheres', 'vac bag', 'esponja', 'esponja multiuso',
+      'esponja de limpeza dupla face', 'pano esponja', 'pano multiuso',
+      'pano reutilizável', 'pano para limpeza', 'refil para limpeza',
+      'manga de confeitar descartável', 'lã de aço', 'esponja de lã de aço',
+      'palha de aço'
+    ]
+  },
+  {
+    'name': 'Descartáveis para festas',
+    'code': 11,
+    'products': [
+      'sacolinhas para festas', 'papel para bombons', 'papel para bala',
+      'canudo', 'cortina metalizada', 'forma para cupcake', 'forminha de papel',
+      'fundo para forminha', 'fundo incolor', 'fundo rendado',
+      'mexedor de drink', 'palitos para coquetel', 'papel decorativo',
+      'papel de presente', 'sacola TNT', 'garfo aperitivo',
+      'garfinho de madeira', 'prato descartável', 'copo descartável'
+    ]
+  },
+  {
+    'name': 'Descartáveis para restaurantes e afins',
+    'code': 12,
+    'products': [
+      'embalagem hot-dog', 'embalagem para churros', 'saco de papel',
+      'saco de papel viagem', 'saco de papel para pipoca',
+      'saco de papel para hambúrguer', 'saco plástico para hambúrguer',
+      'saco plástico para hot-dog', 'saco para hamburgão'
+    ]
+  },
+  {
+    'name': 'Descartáveis para uso hospitalar',
+    'code': 13,
+    'products': [
+      'abaixador de língua', 'lençol hospitalar', 'luvas de vinil',
+      'luva de latex', 'toucas descartáveis'
+    ]
+  },
+  {
+    'name': 'Descartáveis para uso geral',
+    'code': 14,
+    'products': [
+      'luva plástica descartável', 'sacola plástica',
+      'espeto para churrasco', 'espeto de bambu',
+      'palito para churrasco', 'palitos de bambu para dentes',
+      'palitos para dentes', 'palitos de dentes', 'mexedor de café',
+      'tapetes higiênicos', 'toalha umedecida para pets',
+      'productss que não se enquadram nos outros descartáveis'
+    ]
+  },
+  {
+    'name': 'Doces e afins',
+    'code': 15,
+    'products': [
+      'goiabada', 'marmelada', 'doce de leite', 'doces de frutas',
+      'bombons',
+    ]
+  },
+  {
+    'name': 'Drenados',
+    'code': 16,
+    'products': [
+      'azeitonas em conserva', 'dueto em conserva', 'sardinhas em óleo',
+      'sardinha em molho', 'atum em óleo', 'atum em pedaços',
+      'pescado em conserva', 'champignon em conserva', 'ervilhas em conserva',
+      'almôndegas', 'qualquer alimento em conserva ou ao molho',
+      'productss com o termo PESO DRENADO'
+    ]
+  },
+  {
+    'name': 'Farinhas, farináceos e afins',
+    'code': 17,
+    'products': [
+      'farinha de mandioca', 'farinha de trigo', 'farinha de milho', 'farofa',
+      'flocão de milho', 'flocos de milho', 'farinha de arroz',
+      'flocão de arroz', 'fubá', 'goma de tapioca', 'tapioca', 'massa puba',
+      'cuscuz', 'cuscuz flocado'
+    ]
+  },
+  {
+    'name': 'Grãos',
+    'code': 18,
+    'products': [
+      'arroz', 'feijão', 'lentilha (exceto em conserva)',
+      'milho (exceto em conserva)'
+    ]
+  },
+  {
+    'name': 'Higiene pessoal',
+    'code': 19,
+    'products': [
+      'álcool', 'álcool hidratado', 'creme dental', 'sabonete líquido',
+      'sabonete íntimo', 'algodão hidrófilo', 'hastes flexíveis',
+      'productss para banho', 'toalhas de papel', 'toalhas umedecidas'
+      'toalhas de papel interfolhadas', 'papel toalha', 'tolhas umedecidas',
+      'papel toalha interfolhada', 'lenços umedecidos', 'lenços de papel'
+    ]
+  },
+  {
+    'name': 'Infláveis',
+    'code': 20,
+    'products': [
+      'bóia inflável', 'bóia de braço', 'colchão inflável',
+      'colchão bronzeador'
+    ]
+  },
+  {
+    'name': 'Laticínios e achocolatados',
+    'code': 21,
+    'products': [
+      'manteiga', 'creme de leite', 'queijos', 'leite integral', 'leite uht',
+      'leite desnatado', 'leite semidesnatado', 'leite achocolatado',
+      'composto lácteo (exceto os infantis)', 'leite em pó'
+    ]
+  },
+  {
+    'name': 'Massas alimentícias',
+    'code': 22,
+    'products': [
+      'macarrão', 'espaguete', 'lasanha', 'macarrões diversos', 'sêmola',
+      'semola', 'massa de sêmola'
+    ]
+  },
+  {
+    'name': 'Material de construção',
+    'code': 23,
+    'products': [
+      'arame', 'argamassa', 'rejunte', 'tinta uso interno', 'tinta uso externo',
+      'bucha de fixação', 'lona de polietileno', 'lona plástica para pintura',
+      'fita veda rosca', 'veda rosca', 'separador de piso', 'abraçadeira',
+      'bloco de espuma', 'rolo 100% polyester', 'rolo veludo', 'rolo de lã',
+  'rolo de lã de carneiro'
+    ]
+  },
+  {
+    'name': 'Material de escritório',
+    'code': 24,
+    'products': [
+      'papel ofício', 'papel A4', 'papel sulfite', 'fita adesiva', 'post-it',
+      'caneta', 'marca-texto'
+    ]
+  },
+  {
+    'name': 'Material de limpeza',
+    'code': 25,
+    'products': [
+      'água sanitária', 'desinfetante', 'alvejante', 'detergente',
+      'lava-louças', 'lava-roupas', 'sabão em pó'
+    ]
+  },
+  {
+    'name': 'Material elétrico',
+    'code': 26,
+    'products': [
+      'fios', 'condutor elétrico', 'extensão elétrica', 'eletroduto',
+      'filtro de linha', 'fita isolante', 'passa-fio'
+    ]
+  },
+  {'name': 'Óleos e similares',
+    'code': 27,
+    'products': [
+      'óleo de soja', 'óleo de canola', 'azeite de oliva', 'azeite de dendê',
+      'óleo composto'
+    ]
+  },
+  {
+    'name': 'Pescados',
+    'code': 28,
+    'products': [
+      'filé de merluza (congelado ou não)', 'atum (congelado ou não)',
+      'peixe em posta (congelado ou não)', 'camarão', 'sururu', 'massunin'
+    ]
+  },
+  {
+    'name': 'Petiscos',
+    'code': 29,
+    'products': [
+      'amendoim', 'amendoim japonês', 'batata frita', 'batata palha', 'snack',
+      'cheetos', 'salgadinho de milho'
+    ]
+  },
+  {
+    'name': 'productss têxteis',
+    'code': 30,
+    'products': [
+      'babete', 'cortina', 'pano de chão', 'mosqueteiro', 'saco alvejado',
+      'capa em tecido', 'pano microfibras', 'lençol', 'fronha de travesseiro',
+      'jogo de cama', 'pano de copa', 'tolha de rosto', 'toalha de banho',
+      'toalha de mesa', 'toalha para bebê', 'sianinha', 'fitilho', 'cueiro',
+      'capa para travesseiro', 'capa para colchão', 'capa para roupas',
+      'colcha solteiro', 'colcha casal', 'conjunto tapetes para vaso',
+      'cortina de tecido', 'cortina para janela', 'elástico',
+      'faixa ponto cruz', 'fita poliéster', 'fita decorativa',
+      'forro para mesa de passar', 'forro térmico', 'fralda bordada',
+      'fralda algodão', 'edredom', 'porta edredom', 'tapete para banheiro',
+      'tapete para pia'
+    ]
+  },
+  {
+    'name': 'productss cárneos',
+    'code': 31,
+    'products': ['mortadela', 'presunto', 'fiambre', 'salsicha', 'linguiça']
+  },
+  {
+    'name': 'Ração animal e similares',
+    'code': 32,
+    'products': ['ração para cães', 'ração para gatos', 'alpiste', 'xerém']
+  },
+  {
+    'name': 'Utensílios para cozinha',
+    'code': 33,
+    'products': ['avental', 'avental plástico']
+  }
+]
+- Analise a lista abaixo e chame de “except_list”. Cada item corresponde a nomes de mercadorias de um segmento chamado “diversos” que não se enquadram em nenhum segmento de segments_list
+except_list = [
+  'canjica',  'canjiquinha', 'coco ralado', 'leite de coco', 'pão', 'torrada',
+  'sopão', 'fermento', 'mistura para bolo', 'pós para bebida',
+  'pó para refresco', 'preparado para refresco', 'preparado sólido', 'bolo',
+  'bolinho', 'panetone', 'polpa de fruta', 'proteína de soja', 'chá',
+  'soja texturizada'
+]
+- Será fornecido uma string de uma lista de dicionários Python contendo cada um desses dicionários os pares chave/valor “laudo” e “produto”. Chame essa lista de product_list. Cada um desses dicionários representa uma mercadoria sendo “laudo” um número de identificação e “produto” o nome da mercadoria
+- Crie uma lista Python vazia e chame de “result_list” na qual cada item será uma tupla com apenas um par de números
+- Use o conhecimento adquirido na análise de segments_list e de except_list para identificar o segmento de cada item de product_list com os passos abaixo:
+- Passo 1: Compare a grafia de um item de product_list com os valores de except_list. Se a grafia for igual ou muito semelhante a qualquer dos itens de except_list, adicione uma tupla a result_list onde o primeiro número é o valor da chave laudo do item de product_list e o segundo número é 0
+- Passo 2: Caso não haja match no Passo 1, compare a grafia e semântica do valor da chave “produto” do mesmo item de product_list do Passo 1 com os valores da chave “products” de segments_list sem considerar letras maiúsculas e minúsculas. Caso a comparação signifique que o item de product_list é do mesmo segmento de algum item de segments_list, adicione uma tupla em result_list onde o primeiro número é o valor da chave laudo de product_list e o segundo é o valor da chave code do item de segments_list
+- Passo 3: Caso não haja match nem no Passo 1 nem no Passo 2, adicione uma tupla a result_list onde o primeiro número é o valor da chave laudo do item de product_list e o segundo número é 0
+- Passo 4: Repita os Passo 1 a 3 para analisar todos os itens de product_list e retorne result_list
+
