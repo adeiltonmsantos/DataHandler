@@ -20,7 +20,9 @@ segments_list = [
   {
     'name': 'Bebidas não alcoólicas',
     'code': 3,
-    'products': ['refrigerantes', 'sucos diversos', 'néctar de fruta']
+    'products': [
+      'refrigerantes', 'sucos diversos', 'néctar de fruta', 'água' ,
+      'água mineral', 'água de coco']
   },
   {
     'name': 'Bebidas alcoólicas',
@@ -292,7 +294,7 @@ segments_list = [
 - Analise a lista abaixo e chame de “except_list”. Cada item corresponde a nomes de mercadorias de um segmento chamado “diversos” que não se enquadram em nenhum segmento de segments_list
 except_list = [
   'canjica',  'canjiquinha', 'coco ralado', 'leite de coco', 'pão', 'torrada',
-  'sopão', 'fermento', 'mistura para bolo', 'pós para bebida',
+  'sopão', 'fermento', 'mistura para bolo', 'pós para bebida', 'coco',
   'pó para refresco', 'preparado para refresco', 'preparado sólido', 'bolo',
   'bolinho', 'panetone', 'polpa de fruta', 'proteína de soja', 'chá',
   'soja texturizada'
