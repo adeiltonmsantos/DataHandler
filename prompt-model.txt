@@ -130,7 +130,7 @@ segments_list = [
     'code': 15,
     'products': [
       'goiabada', 'marmelada', 'doce de leite', 'doces de frutas',
-      'bombons',
+      'bombons', 'bala', 'bala líquida', 'chiclete', 'goma de mascar'
     ]
   },
   {
@@ -270,11 +270,11 @@ segments_list = [
       'faixa ponto cruz', 'fita poliéster', 'fita decorativa',
       'forro para mesa de passar', 'forro térmico', 'fralda bordada',
       'fralda algodão', 'edredom', 'porta edredom', 'tapete para banheiro',
-      'tapete para pia'
+      'tapete para pia', 'almofada'
     ]
   },
   {
-    'name': 'productss cárneos',
+    'name': 'Produtos cárneos',
     'code': 31,
     'products': ['mortadela', 'presunto', 'fiambre', 'salsicha', 'linguiça']
   },
